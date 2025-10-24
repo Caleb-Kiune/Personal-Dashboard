@@ -11,3 +11,20 @@ async function getData() {
 	
  }
  getData()
+
+
+fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
+ .then(res => {
+    if (!res.ok) {
+      throw Error ('Hold up! Something aint right')
+    }
+  return res.json()
+})
+ .then(data => {
+  console.log(data.name)
+        console.log(data.image)
+        document.getElementById('crypto-name').textContent = data.name
+        document.getElementById('crypto-image').src = data.image.small
+
+})
+ .catch(err => console.log(err))
