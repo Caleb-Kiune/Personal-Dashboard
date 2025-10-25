@@ -38,10 +38,11 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
   setInterval(() => {
     const hours = new Date().getHours()
     const minutes = new Date().getMinutes()
+    const seconds = new Date().getSeconds()
     const amPm = hours >= 12 ? 'PM' : 'AM'
     const minutesUpdate = minutes < 10 ? `${0}${minutes}` : minutes
     const hour12 = hours === 0 ? 12 : hours > 12 ? hours - 12 : hours
-    const currentTime = `${hour12}:${minutesUpdate} ${amPm}`
+    const currentTime = `${hour12}:${minutesUpdate}:${seconds} ${amPm}`
     document.getElementById('time').textContent = currentTime
     console.log(currentTime)
   }, 1000);
