@@ -1,3 +1,4 @@
+//getting and displaying the background image
 async function getData() {
   try {
     const res = await fetch('https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature')
@@ -12,7 +13,7 @@ async function getData() {
  }
  getData()
 
-
+//Getting and displaying crypto data
 fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
  .then(res => {
     if (!res.ok) {
@@ -32,3 +33,15 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
 
 })
  .catch(err => console.log(err))
+
+//getting and update current time
+  setInterval(() => {
+    const hours = new Date().getHours()
+    const minutes = new Date().getMinutes()
+    const amPm = hours >= 12 ? 'PM' : 'AM'
+    const minutesUpdate = minutes < 10 ? `${0}${minutes}` : minutes
+    const hour12 = hours === 0 ? 12 : hours > 12 ? hours - 12 : hours
+    const currentTime = `${hour12}:${minutesUpdate} ${amPm}`
+    document.getElementById('time').textContent = currentTime
+    console.log(currentTime)
+  }, 1000);
