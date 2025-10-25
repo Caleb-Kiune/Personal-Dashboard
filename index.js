@@ -26,5 +26,9 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin')
         document.getElementById('crypto-name').textContent = data.name
         document.getElementById('crypto-image').src = data.image.small
 
+        document.getElementById('crypto-current').textContent += data.market_data.current_price.usd
+        document.getElementById('crypto-high').textContent += data.market_data.high_24h.usd
+        document.getElementById('crypto-low').textContent += data.market_data.low_24h.usd
+
 })
  .catch(err => console.log(err))
