@@ -1,37 +1,39 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-        <meta charset="UTF-8" />
-        <title>Personal Dashboard</title>
-    </head>
-    <body>
-        <main>    
-            <div class="top">
-                <div>
-                    <div class="crypto">
-                        <img id='crypto-image'/>
-                        <p id='crypto-name'>Crypto</p>
-                    </div>
-                    <p id="crypto-current">🎯:</p>
-                    <p id="crypto-high">👆:</p>
-                    <p id="crypto-low">👇:</p>
-                </div>
-                <div id="weather">
-                    <div class="weather-content">
-                        <img id="weather-image"/>
-                        <p id="temp">23</p>
-                    </div>
-                    
-                    <p id="city">Nrb</p>
-                   
-                </div>
-                
-            </div>
-            
-            <h1 id="time" class="time">Time Data</h1>
-            
-            <p id="author"></p>
-        </main>
-        <script src="index.js" type="module"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="top">
+        <!-- Crypto Section -->
+        <div class="crypto">
+          <img id="crypto-image" />
+          <div class="crypto-info">
+            <p id="crypto-name">Crypto</p>
+            <p id="crypto-current">🎯:</p>
+            <p id="crypto-high">👆:</p>
+            <p id="crypto-low">👇:</p>
+          </div>
+        </div>
+
+        <!-- Weather Section -->
+        <div id="weather">
+          <div class="weather-content">
+            <img id="weather-image" />
+            <p id="temp">23</p>
+          </div>
+          <p id="city">Nrb</p>
+        </div>
+      </div>
+
+      <!-- Time + Author -->
+      <h1 id="time" class="time">Time Data</h1>
+      <p id="author"></p>
+    </main>
+
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
